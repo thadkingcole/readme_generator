@@ -95,22 +95,17 @@ const questions = [
   },
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, generateMarkdown(data), (err) => {
-    if (err) {
-      console.log("ERROR!:", err);
-    } else {
-      console.log(`README file ${fileName} successfully written!`);
-    }
-  });
-}
-
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then((answers) => {
     // README.md may already exist, so alternate name will be used
-    writeToFile("READMEgen.md", answers);
+    fs.writeFile("READMEgen.md", generateMarkdown(answers), (err) => {
+      if (err) {
+        console.log("ERROR!:", err);
+      } else {
+        console.log("READMEgen.md successfully written!");
+      }
+    });
   });
 }
 
