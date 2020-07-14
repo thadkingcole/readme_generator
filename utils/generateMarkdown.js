@@ -29,13 +29,14 @@
   license
 */
 function generateMarkdown(data) {
+  const repoName = data.title.replace(/ /g, "_");
   return `# ${data.title}
 
 ![GitHub top language](https://img.shields.io/github/languages/top/${
     data.github
-  }/${data.title}) [![GitHub license](https://img.shields.io/github/license/${
+  }/${repoName}) [![GitHub license](https://img.shields.io/github/license/${
     data.github
-  }/${data.title})](LICENSE) ${
+  }/${repoName})](LICENSE) ${
     data.codeOfConduct
       ? "[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)"
       : null

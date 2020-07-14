@@ -1,6 +1,6 @@
-// require inquirer.js module
+// required modules
+const fs = require("fs");
 const inquirer = require("inquirer");
-// require generateMarkdown.js module
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user -> #section of README each answer goes in
@@ -83,23 +83,41 @@ const questions = [
   // list of options -> add badge of selected license to top of README
   {
     name: "license",
-    type: "list",
+    type: "rawlist",
     message: "Choose a license:",
     choices: [
       "MIT",
       "Apache-2.0",
       "GPL-3.0",
-      // these are the three most popular licenses on github and easy to
-      // implement in any github project
+      // these are the three most popular licenses on github
+      // and easy to implement in any github project
     ],
   },
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, generateMarkdown(data), (err) => {
+    if (err) {
+      console.log("ERROR!:", err);
+    } else {
+      console.log(`README file ${fileName} successfully written!`);
+    }
+  });
+}
+
+function spaceToUnderscore(str) {
+  return str.split(" ").join("_")
+}
 
 // function to initialize program
-function init() {}
+function init() {
+  inquirer.prompt(questions).then((answers) => {
+    // README.md may already exist, so alternate name will be used
+    const readmeFileName = "READMEgen.md"
+    writeToFile(readmeFileName, answers);
+  });
+}
 
 // function call to initialize program
 init();
