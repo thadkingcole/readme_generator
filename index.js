@@ -106,16 +106,11 @@ function writeToFile(fileName, data) {
   });
 }
 
-function spaceToUnderscore(str) {
-  return str.split(" ").join("_")
-}
-
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then((answers) => {
     // README.md may already exist, so alternate name will be used
-    const readmeFileName = "READMEgen.md"
-    writeToFile(readmeFileName, answers);
+    writeToFile("READMEgen.md", answers);
   });
 }
 
