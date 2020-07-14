@@ -31,7 +31,15 @@
 function generateMarkdown(data) {
   return `# ${data.title}
 
-![GitHub top language](https://img.shields.io/github/languages/top/${data.github}/${data.title}) ![GitHub](https://img.shields.io/github/license/${data.github}/${data.github}) ${data.codeOfConduct ? "[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)" : null}
+![GitHub top language](https://img.shields.io/github/languages/top/${
+    data.github
+  }/${data.title}) [![GitHub license](https://img.shields.io/github/license/${
+    data.github
+  }/${data.title})](LICENSE) ${
+    data.codeOfConduct
+      ? "[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)"
+      : null
+  }
 
 ${data.description}
 
@@ -51,7 +59,51 @@ ${data.description}
 
 ${data.installation}
 
-[back to table of contents](#table-of-contents)
+[back to Table of Contents](#table-of-contents)
+
+## Usage
+
+${data.usage}
+
+[back to Table of Contents](#table-of-contents)
+
+## Contributing
+
+${data.contributing}
+
+${
+  data.codeOfConduct
+    ? "Please note that this project is released with a [Contributor Code of Conduct](code_of_conduct.md). By Participating in this project, you agree to abide by its terms."
+    : null
+}
+
+[back to Table of Contents](#table-of-contents)
+
+## Tests
+
+${data.tests}
+
+[back to Table of Contents](#table-of-contents)
+
+## Questions
+
+Please direct any and all questions to [${data.github}](https://github.com/${
+    data.github
+  }) via email [${data.email}](mailto:${data.email}).
+
+[back to Table of Contents](#table-of-contents)
+
+## Credits
+
+${data.credits}
+
+[back to Table of Contents](#table-of-contents)
+
+## License
+
+[${data.license}](LICENSE)
+
+[back to Table of Contents](#table-of-contents)
 `;
 }
 

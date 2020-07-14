@@ -33,43 +33,21 @@ const questions = [
     message: "Enter usage information:",
   },
 
-  // license
-  // list of options -> add badge of selected license to top of README
-  {
-    name: "license",
-    type: "list",
-    message: "Choose a license:",
-    choices: [
-      "MIT",
-      "Apache-2.0",
-      "GPL-3.0",
-      // these are the three most popular licenses on github and easy to
-      // implement in any github project
-    ],
-  },
-
   // contributing code of conduct -> #Contributing
   {
     name: "codeOfConduct",
     type: "confirm",
     message: "Add the Contributor Covenant (code of conduct)?",
     // https://www.contributor-covenant.org/
-    /* 
-      if yes...
-        add the badge to the top of the readme:
-          [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
-        add the following statement to readme under contributing:
-          Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
-    */
   },
 
-  // contribution guidelines -> #contributing
+  // contributing guidelines -> #contributing
   {
     name: "contributing",
     type: "input",
-    message: "Add contribution guidelines:",
+    message: "Add contributing guidelines:",
     default:
-      "Please refer to [contributing.md](contribution guidelines) for this project.",
+      "Your contribution is most welcome! Please refer to the CONTRIBUTING.md when making contributions to this project.",
   },
 
   // test instructions -> #Tests
@@ -92,6 +70,28 @@ const questions = [
     name: "email",
     type: "input",
     message: "Enter your email:",
+  },
+
+  // credits -> #Credits
+  {
+    name: "credits",
+    type: "input",
+    message: "Add any necessary credits:",
+  },
+
+  // license
+  // list of options -> add badge of selected license to top of README
+  {
+    name: "license",
+    type: "list",
+    message: "Choose a license:",
+    choices: [
+      "MIT",
+      "Apache-2.0",
+      "GPL-3.0",
+      // these are the three most popular licenses on github and easy to
+      // implement in any github project
+    ],
   },
 ];
 
