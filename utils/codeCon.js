@@ -6,16 +6,10 @@ function gen(data) {
   exec(`npx covgen ${data.email}`, (error, stdout, stderr) => {
     if (error) {
       console.log("ERROR!:", error.message);
-      console.log(
-        "Visit https://www.contributor-covenant.org/#using-the-contributor-covenant for help adding the CODE_OF_CONDUCT.md file"
-      );
       return;
     }
     if (stderr) {
       console.log("stderr:", stderr);
-      console.log(
-        "Visit https://www.contributor-covenant.org/#using-the-contributor-covenant for help adding the CODE_OF_CONDUCT.md file"
-      );
       return;
     }
     console.log("stdout:", stdout);
@@ -53,9 +47,9 @@ Splendid! Write a pull request and assign [${data.github}](https://github.com/${
 
 No worries! All questions can be directed to [${
     data.github
-  }](https://github.com/${data.github}) or via email at ${data.email}](mailto:${
+  }](https://github.com/${data.github}) or via email at [${
     data.email
-  }). No need to create a new issue.
+  }](mailto:${data.email}). No need to create a new issue.
 
 [back to top](#contributing-guidelines)
 
@@ -67,10 +61,11 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 
 [back to top](#contributing-guidelines)`
     : null
-}`;
+}
+`;
 }
 
 module.exports = {
-  gen: gen,
-  contributing: contributing,
+  gen,
+  contributing,
 };
