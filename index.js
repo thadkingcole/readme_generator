@@ -2,6 +2,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const codeCon = require("./utils/codeCon");
 
 // array of questions for user -> #section of README each answer goes in
 const questions = [
@@ -37,7 +38,8 @@ const questions = [
   {
     name: "codeOfConduct",
     type: "confirm",
-    message: "Add the Contributor Covenant (code of conduct)?",
+    message:
+      "Add the Contributor Covenant? (This will overwrite any existing CODE_OF_CONDUCT.md)",
     // https://www.contributor-covenant.org/
   },
 
@@ -47,7 +49,7 @@ const questions = [
     type: "input",
     message: "Add contributing guidelines:",
     default:
-      "Your contribution is most welcome! Please refer to the CONTRIBUTING.md when making contributions to this project.",
+      "Your contribution is most welcome! Please refer to the contributing guidelines when making contributions to this project.",
   },
 
   // test instructions -> #Tests
@@ -102,10 +104,19 @@ function init() {
     fs.writeFile("READMEgen.md", generateMarkdown(answers), (err) => {
       if (err) {
         console.log("ERROR!:", err);
-      } else {
-        console.log("READMEgen.md successfully written!");
+        return;
       }
+      console.log("READMEgen.md successfully written!");
     });
+    fs.writeFile("CONTRIBUTINGgen.md", codeCon.contributing(answers), (err) => {
+      if (err) {
+        console.log("ERROR!:", err);
+        return;
+      }
+      console.log("CONTRIBUTINGgen.md successfully written!");
+    });
+    if (answers.codeOfConduct) {
+    }
   });
 }
 
