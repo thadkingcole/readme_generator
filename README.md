@@ -57,6 +57,6 @@ Please direct any and all questions to [thadkingcole](https://github.com/thadkin
 
 ## [License](LICENSE)
 
-[MIT](LICENSE)
+[MIT](LICENSE) copywrite (c) 2020 Thaddeus Cole
 
 [back to Table of Contents](#table-of-contents)
