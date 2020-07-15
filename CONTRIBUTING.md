@@ -23,7 +23,7 @@ Splendid! Write a pull request and assign [thadkingcole](https://github.com/thad
 
 ## I have a question on how to use the app
 
-No worries! All questions can be directed to [thadkingcole](https://github.com/thadkingcole) or via email at thadjcole@gmail.com](mailto:thadjcole@gmail.com). No need to create a new issue.
+No worries! All questions can be directed to [thadkingcole](https://github.com/thadkingcole) or via email at [thadjcole@gmail.com](mailto:thadjcole@gmail.com). No need to create a new issue.
 
 [back to top](#contributing-guidelines)
 

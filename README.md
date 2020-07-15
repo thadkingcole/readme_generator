@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/github/license/thadkingcole/Readme_Generator)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
-A console application that generates a README markdown file based on user input.
+A console application that generates README, CONTRIBUTING, and CODE_OF_CONDUCT markdown files based on user input.
 
 ![screenshot placeholder](https://placekitten.com/500/500)
 
@@ -27,7 +27,7 @@ git clone {this repo}; cd readme_generator; npm i
 
 ## Usage
 
-In your console of choice, navigate to the github repository for which you want a README.md generated. Then run node /page/to/readme_generator/index.js
+In your preferred console, navigate to the root directory of the repo where you want markdown files generated. Then enter "readme-gen"
 
 [back to Table of Contents](#table-of-contents)
 
@@ -55,6 +55,7 @@ Please direct any and all questions to [thadkingcole](https://github.com/thadkin
 
 - [inquirer.js](https://www.npmjs.com/package/inquirer)
 - [Executing shell commands with node.js](https://stackabuse.com/executing-shell-commands-with-node-js/)
+- [A guide to creating a NodeJS command-line package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
 
 [back to Table of Contents](#table-of-contents)
 
