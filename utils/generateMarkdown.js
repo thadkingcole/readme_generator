@@ -34,13 +34,15 @@ function generateMarkdown(data) {
 
 ![GitHub top language](https://img.shields.io/github/languages/top/${
     data.github
-  }/${repoName}) [![GitHub license](https://img.shields.io/github/license/${
+  }/${repoName})
+[![GitHub license](https://img.shields.io/github/license/${
     data.github
-  }/${repoName})](LICENSE) ${
-    data.codeOfConduct
-      ? "[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)"
-      : null
-  }
+  }/${repoName})](LICENSE)
+${
+  data.codeOfConduct
+    ? "[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)"
+    : null
+}
 
 ${data.description}
 
@@ -68,7 +70,7 @@ ${data.usage}
 
 [back to Table of Contents](#table-of-contents)
 
-## Contributing
+## [Contributing](CONTRIBUTING.md)
 
 ${data.contributing}
 
@@ -90,7 +92,7 @@ ${data.tests}
 
 Please direct any and all questions to [${data.github}](https://github.com/${
     data.github
-  }) via email [${data.email}](mailto:${data.email}).
+  }) or via email at [${data.email}](mailto:${data.email}).
 
 [back to Table of Contents](#table-of-contents)
 
@@ -100,9 +102,11 @@ ${data.credits}
 
 [back to Table of Contents](#table-of-contents)
 
-## License
+## [License](LICENSE)
 
-[${data.license}](LICENSE)
+[${data.license}](LICENSE) copyright (c) [${data.github}](https://github.com/${
+    data.github
+  })
 
 [back to Table of Contents](#table-of-contents)
 `;
