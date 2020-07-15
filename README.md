@@ -1,5 +1,6 @@
 # Readme Generator
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/539d367a65364d6cbfb867f963147fff)](https://app.codacy.com/manual/thadkingcole/readme_generator?utm_source=github.com&utm_medium=referral&utm_content=thadkingcole/readme_generator&utm_campaign=Badge_Grade_Dashboard)
 ![GitHub top language](https://img.shields.io/github/languages/top/thadkingcole/Readme_Generator) [![GitHub license](https://img.shields.io/github/license/thadkingcole/Readme_Generator)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 A console application that generates a readme markdown file based on input from user.
