@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // required modules
 const fs = require("fs");
 const inquirer = require("inquirer");
@@ -108,6 +110,7 @@ function init() {
       }
       console.log("READMEgen.md successfully written!");
     });
+    // CONTRIBUTING.md may already exist, so alternate name will be used
     fs.writeFile("CONTRIBUTINGgen.md", codeCon.contributing(answers), (err) => {
       if (err) {
         console.log("ERROR!:", err);
@@ -115,7 +118,9 @@ function init() {
       }
       console.log("CONTRIBUTINGgen.md successfully written!");
     });
+    // Generate CODE_OF_CONDUCT.md using npx if desired by user
     if (answers.codeOfConduct) {
+      codeCon.gen(answers);
     }
   });
 }

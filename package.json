@@ -1,8 +1,8 @@
 {
   "name": "readme_generator",
   "version": "1.0.0",
-  "description": "command line/terminal app that generates a readme markdown file based on user input",
-  "main": "index.js",
+  "description": "A console application that generates a readme markdown file based on input from user.",
+  "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,12 +11,15 @@
     "url": "git+https://github.com/thadkingcole/readme_generator.git"
   },
   "author": "Thad Cole",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thadkingcole/readme_generator/issues"
   },
   "homepage": "https://github.com/thadkingcole/readme_generator#readme",
   "dependencies": {
     "inquirer": "^7.3.2"
+  },
+  "bin": {
+    "readme-gen": "./cli.js"
   }
 }
