@@ -94,7 +94,7 @@ Please direct any and all questions to [thadkingcole](https://github.com/thadkin
 
 [back to Table of Contents](#table-of-contents)
 
-## [License](LICENSE)
+## License
 
 [MIT](LICENSE) copyright (c) 2020 [Thaddeus Cole](mailto:thadjcole@gmail.com).
 
