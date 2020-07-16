@@ -20,24 +20,39 @@ function gen(data) {
 function contributing(data) {
   return `# Contributing Guidelines
 
-First of all, I want to thank you for taking the time to contribute to this project. Please refer to the following sections for the situation that best applies.
+Any and all contributions are most welcome! To ensure the smoothest contribution experience possible, please refer to the following sections for the situation that best applies.
 
 - [Bug](#if-you-find-a-bug)
-- [Upgrade](#if-you-think-of-an-upgrade)
+- [New Feature](#if-you-want-a-new-feature)
+- [Pull Requests](#if-your-code-is-ready-for-review)
 - [Questions](#i-have-a-question-on-how-to-use-the-app)
 ${data.codeOfConduct ? "- [Code of Conduct](#code-of-conduct)" : null}
 
-## If you find a bug/upgrade
+## If you find a bug
 
-Awesome! First look at the issues to see if the bug/upgrade has already been identified. If not, create an issue describing the bug/upgrade with as much detail as possible, including steps to recreate.
+Awesome! First look at the issues to see if the bug has already been identified. If not, create an issue using the "Bug report" template.
 
-If the bug/upgrade is unassigned, you may assign it to yourself and begin coding if you would like to try to fix the bug/upgrade. If the bug/upgrade is already assigned, touch base with that developer prior to beginning to code.
+If the bug is unassigned, you may assign it to yourself and begin coding if you would like to try to fix the bug. If the bug is already assigned, touch base with that developer prior to beginning to code.
 
 [back to top](#contributing-guidelines)
 
-## If you fixed a bug/upgrade
+## If you want a new feature
 
-Splendid! Write a pull request and assign [${data.github}](https://github.com/${
+Splendid! First, look at the issues to see if the feature is already being considered. If not, create an issue using the "Feature request" template and assign it to [${
+    data.github
+  }](https://github.com/${
+    data.github
+  }). Once assigned, I will reach out to you to discuss the feature and its efficacy, so be sure to include your contact info in the submitted issue.
+
+You may begin to code if the feature is simple enough to implement, but keep it mind the feature may not be desired by all parties.
+
+[back to top](#contributing-guidelines)
+
+## If your code is ready for review
+
+Amazing! Write a pull request and assign it to [${
+    data.github
+  }](https://github.com/${
     data.github
   }) as reviewer. Include in the pull request the issue number being closed by your work.
 
@@ -45,7 +60,7 @@ Splendid! Write a pull request and assign [${data.github}](https://github.com/${
 
 ## I have a question on how to use the app
 
-No worries! All questions can be directed to [${
+No worries! Any and all questions can be directed to [${
     data.github
   }](https://github.com/${data.github}) or via email at [${
     data.email
@@ -62,6 +77,10 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 [back to top](#contributing-guidelines)`
     : null
 }
+
+## Closing
+
+Thank you for your consideration towards contributing to this project!
 `;
 }
 
