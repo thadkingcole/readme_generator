@@ -21,7 +21,7 @@ const questions = [
   {
     name: "repoName",
     type: "input",
-    message: "Enter Githut Repo Name:",
+    message: "Enter Github Repo Name:",
     default: path.basename(path.resolve()),
   },
 
@@ -29,21 +29,21 @@ const questions = [
   {
     name: "description",
     type: "input",
-    message: "Enter a short description of the project:",
+    message: "Enter a short description of the project:\n",
   },
 
   // installation instructions -> #Installation
   {
     name: "installation",
     type: "input",
-    message: "Enter installation instructions:",
+    message: "Enter installation instructions:\n",
   },
 
   // usage information -> #Usage
   {
     name: "usage",
     type: "input",
-    message: "Enter usage information:",
+    message: "Enter usage information:\n",
   },
 
   // contributing code of conduct -> #Contributing
@@ -59,7 +59,7 @@ const questions = [
   {
     name: "contributing",
     type: "input",
-    message: "Add contributing guidelines:",
+    message: "Add contributing guidelines:\n",
     default:
       "Your contribution is most welcome! Please refer to the contributing guidelines when making contributions to this project.",
   },
@@ -68,7 +68,7 @@ const questions = [
   {
     name: "tests",
     type: "input",
-    message: "Enter test instructions:",
+    message: "Enter test instructions:\n",
   },
 
   // github username -> #Questions
@@ -91,7 +91,7 @@ const questions = [
   {
     name: "credits",
     type: "input",
-    message: "Add any necessary credits:",
+    message: "Add any necessary credits:\n",
   },
 
   // license
@@ -113,6 +113,10 @@ const questions = [
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then((answers) => {
+    // Generate CODE_OF_CONDUCT.md using npx if desired by user
+    if (answers.codeOfConduct) {
+      codeCon.gen(answers);
+    }
     // README.md may already exist, so alternate name will be used
     fs.writeFile("READMEgen.md", genReadme(answers), (err) => {
       if (err) {
@@ -129,10 +133,6 @@ function init() {
       }
       console.log("CONTRIBUTINGgen.md successfully written!");
     });
-    // Generate CODE_OF_CONDUCT.md using npx if desired by user
-    if (answers.codeOfConduct) {
-      codeCon.gen(answers);
-    }
   });
 }
 
