@@ -2,6 +2,7 @@
 
 // required modules
 const fs = require("fs");
+const path = require("path");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const codeCon = require("./utils/codeCon");
@@ -13,6 +14,15 @@ const questions = [
     name: "title",
     type: "input",
     message: "Enter title of project:",
+    default: path.basename(path.resolve()),
+  },
+
+  // github Repo Name -> badges
+  {
+    name: "repoName",
+    type: "input",
+    message: "Enter Githut Repo Name:",
+    default: path.basename(path.resolve()),
   },
 
   // description -> #Description
@@ -74,6 +84,7 @@ const questions = [
     name: "email",
     type: "input",
     message: "Enter your email:",
+    default: "user@domain.com"
   },
 
   // credits -> #Credits
