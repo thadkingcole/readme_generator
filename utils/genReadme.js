@@ -29,6 +29,7 @@
   license
 */
 function genReadme(data) {
+  const date = new Date();
   return `# ${data.title}
 
 ![GitHub top language](https://img.shields.io/github/languages/top/${
@@ -103,9 +104,7 @@ ${data.credits}
 
 ## License
 
-[${data.license}](LICENSE) copyright (c) [${data.github}](https://github.com/${
-    data.github
-  })
+[${data.license}](LICENSE) copyright (c) ${date.getFullYear()} [${data.email}](mailto:${data.email}).
 
 [back to Table of Contents](#table-of-contents)
 `;

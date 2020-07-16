@@ -7,7 +7,7 @@
 
 A console application that generates README, CONTRIBUTING, and CODE_OF_CONDUCT markdown files based on user input.
 
-![screenshot placeholder](https://placekitten.com/500/500)
+![screenshot placeholder](./images/cli.png)
 
 ## Table of Contents
 
@@ -21,17 +21,56 @@ A console application that generates README, CONTRIBUTING, and CODE_OF_CONDUCT m
 
 ## Installation
 
-git clone {this repo}; cd readme_generator; npm i
+First, clone this repository using your preferred method.
+
+```git
+with SSH:
+
+git clone git@github.com:thadkingcole/readme_generator.git
+```
+```
+with https:
+
+git clone https://github.com/thadkingcole/readme_generator.git
+```
+
+Once the repo is cloned, navigate into its root directory and run "npm i" to install the app.
+
+```terminal
+cd readme_generator
+npm i
+```
 
 [back to Table of Contents](#table-of-contents)
 
 ## Usage
 
-In your preferred console, navigate to the root directory of the repo where you want markdown files generated. Then enter "readme-gen"
+See [demo video](https://drive.google.com/file/d/1nA-Swyk7RdjygIuWfRAWormzdMM4CN_-/view), or follow the following instructions.
+
+Using your preferred console, navigate to the root directory of the repo where you want markdown files generated. Then enter "readme-gen"
+
+```terminal
+readme-gen
+```
+
+Follow and answer the prompts as they appear.
+
+![prompts](./images/cli.png)
+
+Once all prompts have been answered, the app generates the following files:
+
+```
+1) CONTRIBUTINGgen.md
+2) READMEgen.md
+3) CODE_OF_CONDUCT.md (if user replied yes to contributor covenant prompt)
+```
+
+Review these files and make any desired changes. Once all changes have been made, delete the "gen" from the file names. This allows github to use the files and allows the files to link to each other.
+
 
 [back to Table of Contents](#table-of-contents)
 
-## [Contributing](CONTRIBUTING.md)
+## Contributing
 
 Your contribution is most welcome! Please refer to the [contributing guidelines](CONTRIBUTING.md) when making contributions to this project.
 
@@ -61,6 +100,6 @@ Please direct any and all questions to [thadkingcole](https://github.com/thadkin
 
 ## [License](LICENSE)
 
-[MIT](LICENSE) copyright (c) 2020 Thaddeus Cole
+[MIT](LICENSE) copyright (c) 2020 [Thaddeus Cole](mailto:thadjcole@gmail.com).
 
 [back to Table of Contents](#table-of-contents)
