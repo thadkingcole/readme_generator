@@ -21,16 +21,13 @@ A console application that generates README, CONTRIBUTING, and CODE_OF_CONDUCT m
 
 ## Installation
 
-First, clone this repository using your preferred method.
+First, clone this repository using your preferred method, SSH:
 
 ```git
-with SSH:
-
 git clone git@github.com:thadkingcole/readme_generator.git
 ```
-```
-with https:
-
+or HTTPS:
+```git
 git clone https://github.com/thadkingcole/readme_generator.git
 ```
 
@@ -66,7 +63,6 @@ Once all prompts have been answered, the app generates the following files:
 ```
 
 Review these files and make any desired changes. Once all changes have been made, delete the "gen" from the file names. This allows github to use the files and allows the files to link to each other.
-
 
 [back to Table of Contents](#table-of-contents)
 
