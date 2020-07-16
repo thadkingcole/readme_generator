@@ -4,7 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
+const genReadme = require("./utils/genReadme");
 const codeCon = require("./utils/codeCon");
 
 // array of questions for user -> #section of README each answer goes in
@@ -114,7 +114,7 @@ const questions = [
 function init() {
   inquirer.prompt(questions).then((answers) => {
     // README.md may already exist, so alternate name will be used
-    fs.writeFile("READMEgen.md", generateMarkdown(answers), (err) => {
+    fs.writeFile("READMEgen.md", genReadme(answers), (err) => {
       if (err) {
         console.log("ERROR!:", err);
         return;

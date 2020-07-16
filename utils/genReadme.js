@@ -28,16 +28,15 @@
 
   license
 */
-function generateMarkdown(data) {
-  const repoName = data.title.replace(/ /g, "_");
+function genReadme(data) {
   return `# ${data.title}
 
 ![GitHub top language](https://img.shields.io/github/languages/top/${
     data.github
-  }/${repoName})
-[![GitHub license](https://img.shields.io/github/license/${
-    data.github
-  }/${repoName})](LICENSE)
+  }/${data.repoName})
+[![GitHub license](https://img.shields.io/github/license/${data.github}/${
+    data.repoName
+  })](LICENSE)
 ${
   data.codeOfConduct
     ? "[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)"
@@ -70,7 +69,7 @@ ${data.usage}
 
 [back to Table of Contents](#table-of-contents)
 
-## [Contributing](CONTRIBUTING.md)
+## Contributing
 
 ${data.contributing}
 
@@ -102,7 +101,7 @@ ${data.credits}
 
 [back to Table of Contents](#table-of-contents)
 
-## [License](LICENSE)
+## License
 
 [${data.license}](LICENSE) copyright (c) [${data.github}](https://github.com/${
     data.github
@@ -112,4 +111,4 @@ ${data.credits}
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = genReadme;
