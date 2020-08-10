@@ -37,6 +37,7 @@ const questions = [
     name: "installation",
     type: "input",
     message: "Enter installation instructions:\n",
+    default: "*installation instructions go here*",
   },
 
   // usage information -> #Usage
@@ -44,6 +45,7 @@ const questions = [
     name: "usage",
     type: "input",
     message: "Enter usage information:\n",
+    default: "*usage information goes here*",
   },
 
   // contributing code of conduct -> #Contributing
@@ -69,6 +71,7 @@ const questions = [
     name: "tests",
     type: "input",
     message: "Enter test instructions:\n",
+    default: "*test instructions go here*",
   },
 
   // github username -> #Questions
@@ -76,6 +79,7 @@ const questions = [
     name: "github",
     type: "input",
     message: "Enter your github username:",
+    default: "thadkingcole",
   },
 
   // email address -> #Questions
@@ -84,7 +88,7 @@ const questions = [
     name: "email",
     type: "input",
     message: "Enter your email:",
-    default: "user@domain.com"
+    default: "thadjcole@gmail.com",
   },
 
   // credits -> #Credits
@@ -92,6 +96,7 @@ const questions = [
     name: "credits",
     type: "input",
     message: "Add any necessary credits:\n",
+    default: "I would like to thank the following people/projects/resources:",
   },
 
   // license
