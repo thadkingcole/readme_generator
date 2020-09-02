@@ -26,7 +26,9 @@ First, clone this repository using your preferred method, SSH:
 ```git
 git clone git@github.com:thadkingcole/readme_generator.git
 ```
+
 or HTTPS:
+
 ```git
 git clone https://github.com/thadkingcole/readme_generator.git
 ```
