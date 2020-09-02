@@ -7,7 +7,7 @@
 
 A console application that generates README, CONTRIBUTING, and CODE_OF_CONDUCT markdown files based on user input.
 
-![screenshot placeholder](./images/cli.png)
+![screenshot placeholder](./public/images/screenshot.png)
 
 ## Table of Contents
 
@@ -52,15 +52,13 @@ readme-gen
 
 Follow and answer the prompts as they appear.
 
-![prompts](./images/cli.png)
+![prompts](./public/images/screenshot.png)
 
 Once all prompts have been answered, the app generates the following files:
 
-```
-1) CONTRIBUTINGgen.md
-2) READMEgen.md
-3) CODE_OF_CONDUCT.md (if user replied yes to contributor covenant prompt)
-```
+1. ```CONTRIBUTINGgen.md```
+1. ```READMEgen.md```
+1. ```CODE_OF_CONDUCT.md``` (if user replied yes to contributor covenant prompt)
 
 Review these files and make any desired changes. Once all changes have been made, delete the "gen" from the file names. This allows github to use the files and allows the files to link to each other.
 
