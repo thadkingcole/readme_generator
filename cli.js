@@ -30,6 +30,7 @@ const questions = [
     name: "description",
     type: "input",
     message: "Enter a short description of the project:\n",
+    default: "```short description goes here```"
   },
 
   // installation instructions -> #Installation
@@ -37,7 +38,7 @@ const questions = [
     name: "installation",
     type: "input",
     message: "Enter installation instructions:\n",
-    default: "*installation instructions go here*",
+    default: "```installation instructions go here```",
   },
 
   // usage information -> #Usage
@@ -45,7 +46,7 @@ const questions = [
     name: "usage",
     type: "input",
     message: "Enter usage information:\n",
-    default: "*usage information goes here*",
+    default: "```usage information goes here```",
   },
 
   // contributing code of conduct -> #Contributing
@@ -71,7 +72,7 @@ const questions = [
     name: "tests",
     type: "input",
     message: "Enter test instructions:\n",
-    default: "*test instructions go here*",
+    default: "```test instructions go here```",
   },
 
   // github username -> #Questions
